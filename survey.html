@@ -1,0 +1,242 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Survey Form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<style>
+		* {box-sizing: border-box;}
+		body{
+			background-image: url("https://www.appsvolt.com/wp-content/uploads/2020/07/Light-Form-Background.jpg");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+
+		.container {
+			background-color: rgba(10, 10, 255, 0.2);
+			font-family: arial;
+			justify-content: center;
+			padding: 50px;
+				
+		}
+		
+		
+		fieldset {
+		
+			border: 0px solid rgba(255, 255, 255, 1);
+		}
+
+		h1, p {
+			text-align: center;
+			color: rgb(80, 80, 165);
+			margin: 0px auto 5px auto;
+
+		}
+
+
+		form {
+			display: block;
+			background-color: rgba(30, 30, 80, 0.5);
+			padding: 20px;
+			width: 60%;
+			margin: 30px auto;
+			border-radius: 5px;
+			color: white;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9)
+		}
+
+
+		label {
+			padding: 12px 12px 12px 0;
+			display: inline-block;
+			font-size: 20px;
+			font-style: bold;
+			color: white;
+
+		}
+		
+		input[type=text],[type=number],[type=email], [type=tel], select, textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 2px;
+			resize: vertical;
+
+		}
+
+		.radioInput, .checkbox {
+			display: inline-block;
+			line-height: inherit;
+			margin-right: 15px;
+			margin-top: 5px;
+
+		}
+		textarea{
+			min-height: 150px;
+		}
+
+		button[type=submit]{
+			width: 100%;
+			margin: 20px auto auto auto;
+			padding: 10px;
+			background-color: rgba(255, 160, 0, 0.8);
+			border: 0px solid black;
+			border-radius: 2px;
+			font-style: bold;
+		}
+
+		button[type=submit]:hover {
+			background-color: rgba(30, 30, 100);
+			color: orange;
+
+		}
+
+	@media only screen and (min-width: 768px) {
+		.container {
+			padding: 50px;
+				
+		}
+		
+		
+		form {
+			padding: 20px;
+			width: 60%;
+			margin: 30px auto;
+			
+		}
+	}
+
+
+	@media only screen and (max-width: 768px) {
+
+			body{
+				margin: 0px;
+			}
+
+			form {
+				padding: 10px;
+				width: 100%;
+				margin: 10px auto;
+				
+			}
+
+		}
+
+
+
+	
+	
+	@media only screen and (max-width: 480px) {
+
+			body{
+				margin: 0px;
+			}
+			.container{
+				padding: 50px 5px;
+			}
+
+			form {
+				width: 100%;
+				margin: 5px auto;
+				padding: 0px;
+				
+			}
+			label {
+				padding: 5px 5px 5px 0;
+				display: inline-block;
+				font-size: 15px;
+			}
+
+			input[type=text],[type=number],[type=email], [type=tel], select, textarea {
+				
+				padding: 5px;
+				border: 1px solid #ccc;
+				border-radius: 2px;
+				resize: vertical;
+
+			}
+
+
+		}
+
+	
+	</style>
+
+	<body>
+
+		<div class="container">
+			<header>
+				<h1 id="title"> Sanchi Customer Form </h1>
+				<p id="description"><i>To help us improve our services please fill the form and submit </i></p>
+			</header>
+
+
+			<form id="survey-form">
+				<fieldset>
+					
+				
+					<label id="name-label" for="name">Full Name</label><br>
+					<input id="name" type="text" name="nameField" placeholder="Enter your name here" required>
+					<br><br>
+
+					<label id="email-label" for="email">Email</label><br>
+					<input id="email" type="email" name="email" placeholder="Ex. youremail@email.com" required><br><br>
+
+					<label id="number-label" for="number">Age <small>(optional)</small></label><br>
+					<input id="number" type="number" name="number" min="10" max="99" placeholder="10" required>
+					<br><br>
+		
+					<label id="phone-number-label" for="phone-number">Mobile Number <small>(optional)</label><br>
+					<input id="phone-number" type="tel" name="phone-number" min="6000000000" max="9999999999" placeholder="Ex. 9999999999" required>
+					<br><br>
+
+					<label for="company">Which company you prefer for milk </label><br>
+					<select id="dropdown" name="company">
+						<option value="Sanchi">Sanchi</option>
+						<option value="Amul">Amul</option>
+						<option value="Aavin">Aavin</option>
+					 	<option value="Mother Dairy">Mother Dairy</option>
+					</select>
+					<br><br>
+					<label id="firsRradioInput" for="state">In which state you live</label><br>
+						<input type="radio" name="state" class="radioInput" value="Madhya Pradesh">Madhya Pradesh<br>
+						<input type="radio" name="state" class="radioInput" value="Tamilnadu">Tamilnadu<br>
+						<input type="radio" name="state" class="radioInput" value="Utter Pradesh">Uttar Pradesh
+
+					<br><br>
+
+					<label id="labelCheckbox" for="checkbox">What products you prefer to buy</label><br>
+						<input type="checkbox" name="checkbox" class="checkbox" value="Milk">Milk<br>
+						<input type="checkbox" name="checkbox" class="checkbox" value="Ghee">Ghee<br>
+						<input type="checkbox" name="checkbox" class="checkbox" value="Danhi">Danhi<br>
+						<input type="checkbox" name="checkbox" class="checkbox" value="Lassi">Lassi<br>
+						<input type="checkbox" name="checkbox" class="checkbox" value="Makkhan">Makkhan<br>
+						<input type="checkbox" name="checkbox" class="checkbox" value="Shree Khand">Shree Khand<br>
+						<input type="checkbox" name="checkbox" class="checkbox" value="Milk Shake">Milk Shake<br>
+
+						<br><br>
+
+					<label id="secodRadioInput" for="payment">Which payment method you like most</label><br>
+						<input type="radio" name="payment" class="radioInput" value="Cash">Cash Payment<br>
+						<input type="radio" name="payment" class="radioInput" value="Mobile">Mobile Wallet<br>
+						<input type="radio" name="payment" class="radioInput" value="Digital">Digital Currency
+
+					<br><br>
+
+
+					<label for="textarea">Any suggestion you have fo dairy</label> <br> <textarea id="textarea" type="text" name="textarea" placeholder="Enter your opinion here ..."></textarea> <br>
+
+					<button id="submit" type="submit" name="submit">Submit</button>
+				</fieldset>
+
+			</form>
+
+
+		</div>
+	</body>
+</html>
